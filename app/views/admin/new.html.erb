@@ -3,6 +3,7 @@
 <%=form_remote_tag :url => {:action => 'create' },
 :update => "show_item",
 :complete => visual_effect(:highlight, "show_item") %>
+puts"hello"
 <%= error_messages_for :registration %>
 <p><label for ="registrations_user_name">UserName</label>:
 <%= text_field 'registration', 'user_name' %></p>
