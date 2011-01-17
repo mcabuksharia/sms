@@ -1,0 +1,22 @@
+<h1>Please register here</h1>
+<div id="show_item"></div>
+<%=form_remote_tag :url => {:action => 'create' },
+:update => "show_item",
+:complete => visual_effect(:highlight, "show_item") %>
+<%= error_messages_for :registration %>
+<p><label for ="registrations_user_name">UserName</label>:
+<%= text_field 'registration', 'user_name' %></p>
+<p><label for ="registrations_role">Role</label>:
+<%= text_field 'registration', 'role' %></p>
+<p><lable for ="registrations_email_id">Email Id</label>:
+<%= text_field 'registration','email_id' %></p>
+<p><label for ="registrations_contact_no">Contact No</label>:
+<%= text_field 'registration','contact_no' %></p>
+<p><label for ="registrations_password">Password</label>:
+<%= text_field 'registration','password' %></p>
+<p><label for ="registrations_confirm_password">Confirm Password</label>:
+<%= text_field 'registration','confirm_password' %></p>
+<%= submit_tag 'create' %><%= link_to "Back",{:action =>"Back"}%>
+
+
+
